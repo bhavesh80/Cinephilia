@@ -11,26 +11,21 @@
 
 - [https://assertj.github.io/doc/](https://assertj.github.io/doc/)
 
-
 ## Feature mockito documentation
 
 - [https://site.mockito.org](https://site.mockito.org)
-
 
 ## Feature jdbc-hikari documentation
 
 - [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
 
-
 ## Feature http-client documentation
 
 - [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
-
 ## Feature hibernate-jpa documentation
 
 - [Micronaut Hibernate JPA documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#hibernate)
-
 
 ## Feature liquibase documentation
 

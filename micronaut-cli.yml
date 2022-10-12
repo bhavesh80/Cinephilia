@@ -3,4 +3,4 @@ defaultPackage: co.incubyte
 testFramework: junit
 sourceLanguage: java
 buildTool: gradle
-features: [annotation-api, app-name, assertj, gradle, h2, hibernate-jpa, http-client, jackson-databind, java, java-application, jdbc-hikari, junit, liquibase, logback, micronaut-build, mockito, netty-server, readme, shade, yaml]
+features: [ annotation-api, app-name, assertj, gradle, h2, hibernate-jpa, http-client, jackson-databind, java, java-application, jdbc-hikari, junit, liquibase, logback, micronaut-build, mockito, netty-server, readme, shade, yaml ]
