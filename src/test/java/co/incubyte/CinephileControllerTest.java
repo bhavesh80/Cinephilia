@@ -17,7 +17,7 @@ public class CinephileControllerTest {
 
     @Test
     void testIndex() throws Exception {
-        String retrieve = client.toBlocking().retrieve("/cinephile/person/TomCruise");
+        String retrieve = client.toBlocking().retrieve("/cinephile/people/1");
         assertEquals("Hello TomCruise!!!", retrieve);
     }
 

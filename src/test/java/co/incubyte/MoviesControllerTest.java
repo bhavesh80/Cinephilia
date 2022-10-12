@@ -22,7 +22,8 @@ public class MoviesControllerTest {
     @Test
     @DisplayName("it should find movie data")
     public void it_should_find_movie_data() {
-        List<Movie> movies = client.toBlocking().retrieve(HttpRequest.GET("?query=Schindler"), Argument.listOf(Movie.class));
+        List<Movie> movies = client.toBlocking().retrieve(HttpRequest.GET("?query=Schindler"),
+                Argument.listOf(Movie.class));
 
         assertThat(movies.size()).isGreaterThan(0);
         assertThat(movies.get(0).getName().length()).isGreaterThan(0);
