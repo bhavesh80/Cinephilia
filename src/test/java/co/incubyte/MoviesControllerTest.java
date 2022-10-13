@@ -32,6 +32,7 @@ public class MoviesControllerTest {
         assertThat(movies.get(0).getRating()).isGreaterThan(0.0f);
         assertThat(movies.get(0).getCount()).isGreaterThan(0);
         assertThat(movies.get(0).getReleaseDate()).isEqualTo("1993-12-15");
+        assertThat(movies.get(0).getId()).isEqualTo(424);
 
     }
 

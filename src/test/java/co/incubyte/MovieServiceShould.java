@@ -1,6 +1,5 @@
 package co.incubyte;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,7 +21,7 @@ public class MovieServiceShould {
         MovieService movieService = new MovieService(movieGateway);
 
         Movie movie = new Movie("Schindler's List", "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
-                8.6f, 13306, "1993-12-15");
+                8.6f, 13306, "1993-12-15", 1);
         TmdbResponse tmdbResponseData = new TmdbResponse(1, List.of(movie));
 
 
