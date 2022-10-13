@@ -1,5 +1,6 @@
 package co.incubyte;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,5 +21,14 @@ public class MovieControllerShould {
         MovieController movieController = new MovieController(movieService);
         movieController.find("Schindler");
         verify(movieService).find("Schindler");
+    }
+
+    @Test
+    @DisplayName("invoke get in movie service")
+    public void invoke_get_in_movie_service() {
+        MovieController movieController = new MovieController(movieService);
+        movieController.get(1);
+        verify(movieService).get(1);
+
     }
 }

@@ -13,11 +13,19 @@ import java.nio.charset.StandardCharsets;
 public class MovieGateway {
 
     @Inject
-    @Client("https://api.themoviedb.org/3/search/movie")
+    @Client("https://api.themoviedb.org/3/")
     HttpClient client;
 
     public TmdbResponse find(String name) {
-        return client.toBlocking().retrieve(HttpRequest.GET("?api_key=71ef5befeacf953e353b1497fe5b64cb&query=" + URLEncoder.encode(name, StandardCharsets.UTF_8)),
+        return client.toBlocking().retrieve(HttpRequest.GET("search/movie?api_key=71ef5befeacf953e353b1497fe5b64cb&query=" + URLEncoder.encode(name, StandardCharsets.UTF_8)),
                 TmdbResponse.class);
+    }
+
+    public MovieDetail getById(int id) {
+        var uri = "movie/" + id + "?api_key=e470560acfb347655d8af373c29aba11";
+        System.out.println(uri);
+        return client.toBlocking()
+                .retrieve(HttpRequest.GET(uri),
+                        MovieDetail.class);
     }
 }

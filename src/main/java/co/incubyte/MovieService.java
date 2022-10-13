@@ -16,4 +16,8 @@ public class MovieService {
     public List<Movie> find(String name) {
         return movieGateway.find(name).getMovies();
     }
+
+    public MovieDetail get(int id) {
+        return movieGateway.getById(id);
+    }
 }

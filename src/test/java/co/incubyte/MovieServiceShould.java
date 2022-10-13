@@ -31,4 +31,17 @@ public class MovieServiceShould {
 
         Mockito.verify(movieGateway).find("Schindler");
     }
+    
+    @Test
+    @DisplayName("invoke get in movie gateway")
+    public void invoke_get_in_movie_gateway() {
+        MovieService movieService = new MovieService(movieGateway);
+        MovieDetail movieDetail = new MovieDetail("","",0,"");
+
+        movieService.get(1);
+        Mockito.verify(movieGateway).getById(1);
+
+
+
+    }
 }

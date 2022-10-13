@@ -34,4 +34,17 @@ public class MoviesControllerTest {
         assertThat(movies.get(0).getReleaseDate()).isEqualTo("1993-12-15");
 
     }
+
+    @Test
+    @DisplayName("should get movie information by id")
+    public void should_get_movie_information_by_id() {
+        MovieDetail movieDetail = client.toBlocking()
+                .retrieve(HttpRequest.GET("361743"), MovieDetail.class);
+        assertThat(movieDetail).isNotNull();
+        assertThat(movieDetail.getBackDropPath()).isEqualTo("/odJ4hx6g6vBt4lBWKFD1tI8WS4x.jpg");
+        assertThat(movieDetail.getOriginalLanguage()).isEqualTo("en");
+        assertThat(movieDetail.getDuration()).isEqualTo(131);
+        assertThat(movieDetail.getOverview()).startsWith(
+                "After more than thirty years of service as one of the Navy");
+    }
 }
